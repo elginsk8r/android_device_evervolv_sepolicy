@@ -26,3 +26,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     $(COMMON_EVERVOLV_SEPOLICY)/dynamic \
     $(COMMON_EVERVOLV_SEPOLICY)/vendor
 endif
+
+# Include atv rules on atv product
+ifeq ($(PRODUCT_IS_ATV), true)
+include device/evervolv/sepolicy/atv/sepolicy.mk
+endif
